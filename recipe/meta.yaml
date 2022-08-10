@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-flask" %}
-{% set version = "0.32b0" %}
+{% set version = "0.33b0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-flask-{{ version }}.tar.gz
-  sha256: 8051cbedcb0d83cd5cb97407f420f362c552c5033f06a04e9858c0d081148e25
+  sha256: cb5674325a14aa5ddc83fa91aaa23a3dcb1b16353a5c948505a57f639f16e3a5
 
 build:
   number: 0
@@ -20,11 +20,11 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - opentelemetry-api ~=1.3
-    - opentelemetry-instrumentation ==0.32b0
-    - opentelemetry-instrumentation-wsgi ==0.32b0
-    - opentelemetry-semantic-conventions ==0.32b0
-    - opentelemetry-util-http ==0.32b0
+    - opentelemetry-api ~=1.12
+    - opentelemetry-instrumentation ==0.33b0
+    - opentelemetry-instrumentation-wsgi ==0.33b0
+    - opentelemetry-semantic-conventions ==0.33b0
+    - opentelemetry-util-http ==0.33b0
     - python >=3.6
     # - opentelemetry-test ==0.24b0
     # - flask <3.0,>=1.0
@@ -52,6 +52,9 @@ requirements:
     # - markupsafe ==2.0.1
     # - flask <3.0,>=1.0
     # - opentelemetry-test-utils ==0.32b0
+    # - markupsafe ==2.0.1
+    # - flask <3.0,>=1.0
+    # - opentelemetry-test-utils ==0.33b0
     # - markupsafe ==2.0.1
     # - flask <3.0,>=1.0
 
