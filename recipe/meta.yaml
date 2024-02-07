@@ -43,7 +43,7 @@ test:
   imports:
     - opentelemetry
     - opentelemetry.instrumentation
-    - opentelemetry_instrumentation.flask
+    - opentelemetry.instrumentation.flask
   commands:
     - pip check
   requires:
