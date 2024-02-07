@@ -29,15 +29,7 @@ requirements:
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-flask 
     # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
-    # - opentelemetry-test-utils ==0.38b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
-    # - opentelemetry-test-utils ==0.39b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
+    - flask >=1.0,<3.0
 
 test:
   imports:
