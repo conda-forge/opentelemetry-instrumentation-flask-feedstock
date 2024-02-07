@@ -26,6 +26,7 @@ requirements:
     - opentelemetry-instrumentation-wsgi =={{ version }}
     - opentelemetry-semantic-conventions =={{ version }}
     - opentelemetry-util-http =={{ version }}
+    - packaging >=21.0
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-flask 
     # - markupsafe ==2.0.1
