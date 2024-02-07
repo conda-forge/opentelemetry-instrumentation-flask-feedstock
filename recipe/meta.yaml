@@ -11,37 +11,31 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
     - python >=3.7
-    - pip
     - hatchling
+    - pip
   run:
     - python >=3.7
-    - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation-wsgi ==0.39b0
-    - opentelemetry-instrumentation ==0.39b0
-    - opentelemetry-semantic-conventions ==0.39b0
-    - opentelemetry-util-http ==0.39b0
+    - opentelemetry-api >=1.12,<2.0
+    - opentelemetry-instrumentation =={{ version }}
+    - opentelemetry-instrumentation-wsgi =={{ version }}
+    - opentelemetry-semantic-conventions =={{ version }}
+    - opentelemetry-util-http =={{ version }}
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-flask 
     # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
-    # - opentelemetry-test-utils ==0.38b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
-    # - opentelemetry-test-utils ==0.39b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.0.1
-    # - flask <3.0,>=1.0
+    - flask >=1.0,<3.0
+
 test:
   imports:
     - opentelemetry
     - opentelemetry.instrumentation
+    - opentelemetry.instrumentation.flask
   commands:
     - pip check
   requires:
