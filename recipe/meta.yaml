@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-flask" %}
-{% set version = "0.55b1" %}
+{% set version = "0.56b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_flask-{{ version }}.tar.gz
-  sha256: db95a29e87694f9d96744880cfaf7b6672247a839c8ed5c4162a655ba2e9e2d8
+  sha256: c470e4ff89bc950e30840bab1ff87f7e5c770b62bc1a2c6df32f5c6ede7fae07
 
 build:
   noarch: python
@@ -22,10 +22,10 @@ requirements:
   run:
     - python >={{ python_min }}
     - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.55b1
-    - opentelemetry-instrumentation-wsgi ==0.55b1
-    - opentelemetry-semantic-conventions ==0.55b1
-    - opentelemetry-util-http ==0.55b1
+    - opentelemetry-instrumentation ==0.56b0
+    - opentelemetry-instrumentation-wsgi ==0.56b0
+    - opentelemetry-semantic-conventions ==0.56b0
+    - opentelemetry-util-http ==0.56b0
     - packaging >=21.0
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-flask 
