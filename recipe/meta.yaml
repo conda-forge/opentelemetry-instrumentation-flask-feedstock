@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-flask" %}
-{% set version = "0.57b0" %}
+{% set version = "0.56b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_flask-{{ version }}.tar.gz
-  sha256: c5244a40b03664db966d844a32f43c900181431b77929be62a68d4907e86ed25
+  sha256: c470e4ff89bc950e30840bab1ff87f7e5c770b62bc1a2c6df32f5c6ede7fae07
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,23 +22,12 @@ requirements:
   run:
     - python >={{ python_min }}
     - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.57b0
-    - opentelemetry-instrumentation-wsgi ==0.57b0
-    - opentelemetry-semantic-conventions ==0.57b0
-    - opentelemetry-util-http ==0.57b0
+    - opentelemetry-instrumentation =={{ version }}
+    - opentelemetry-instrumentation-wsgi =={{ version }}
+    - opentelemetry-semantic-conventions =={{ version }}
+    - opentelemetry-util-http =={{ version }}
     - packaging >=21.0
-    # - opentelemetry-test-utils ==0.37b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.0.1
     - flask >=1.0
-    - werkzeug <3.0.0
-    # - opentelemetry-test-utils ==0.44b0
-    # - opentelemetry-instrumentation-flask 
-    # - markupsafe ==2.1.2
-    # - importlib-metadata >=4.0
-    # - importlib-metadata >=4.0
-    # - importlib-metadata >=4.0
-    # - importlib-metadata >=4.0
 
 test:
   imports:
@@ -61,3 +50,4 @@ extra:
   recipe-maintainers:
     - rxm7706
     - mariusvniekerk
+    - conda-forge/opentelemetry-api
